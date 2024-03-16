@@ -10,20 +10,44 @@ const collectEmployees = function() {
   // add an employee? then create and add with add function
 
   const CreateEmployee = function () {
+
+    
+    const SetSalary = function () {
+      let sal;
+      
+     sal = Number(window.prompt("What is their salary?", ""));
+     if(sal === 0){ sal = NaN;}
+     while(isNaN(sal)) {
+      sal = Number(window.prompt("please enter a numerical value", ""))
+      if(sal === 0){ sal = NaN;}
+    }
+  
+    return sal;
+  
+  
+    }
+
     const newEmployee = {
 
     firstName: window.prompt("What is the employee's first name?", ""),
     lastName: window.prompt("What is the employee's last name?", ""),
-    salary: window.prompt("What is thier salary?", "")
+    salary: SetSalary()  ,
     
-  };
+  }
+
+  
+  if(newEmployee.salary === NaN){ newEmployee = Number(prompt("Please enter a numerical value", ""))}
+  
   return newEmployee;
 
   }
 
   const addtoArray = function(){
+    const newemp = CreateEmployee();
 
-  employees.push(CreateEmployee());
+    if (newemp.salary === NaN){newemp.salary = Number(prompt("please enter a numerical value", ""))}
+
+  employees.push(newemp);
   alert("Employee added")
    
   if(confirm("Add another Employee?")) {
@@ -34,6 +58,7 @@ const collectEmployees = function() {
 
 }
 
+// ask if add another. if yes add function again if no 
 
    addtoArray();
 
@@ -41,7 +66,6 @@ const collectEmployees = function() {
 
   return employees;
 
-  // ask if add another. if yes add function again if no return employees
 
 
 
@@ -51,6 +75,8 @@ const collectEmployees = function() {
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
+
+
 }
 
 // Select a random employee
