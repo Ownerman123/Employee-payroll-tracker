@@ -29,5 +29,6 @@ To view the average salary and randomly selected employee open the console by ri
 
 ## Deployed
 
+https://ownerman123.github.io/Employee-payroll-tracker/
 
 
