@@ -24,7 +24,7 @@ To view the average salary and randomly selected employee open the console by ri
 
 ## Screenshot
     
-    ![Screenshot of aplication](assets/imgs/image.png)
+    !["Screenshot of aplication"](./assets/Screenshot%202024-03-18%20095518.png)
     
 
 ## Deployed
